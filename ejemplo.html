@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUDScope – Panel de Tareas y Multimedia</title>
+    <base href="https://riwi.com/contacto/"> 
+</head>
+<body>
+
+    <header>
+        <h1>CRUDScope - Panel de Tareas</h1>
+        <p>Una herramienta para <abbr title="Create, Read, Update, Delete">CRUD</abbr> de tareas. 
+            Utiliza <mark>HTML Semántico</mark> para una mejor estructura.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#crear">Crear Tarea</a></li>
+            <li><a href="#listado">Listado de Tareas</a></li>
+            <li><a href="#media">Multimedia</a></li>
+            <li><a href="acerca">Acerca de</a></li> 
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="crear">
+            <h2>Crear Tarea</h2>
+            <p>Aquí puedes registrar una nueva tarea. Es la parte de la 'C' (Create) del CRUD.</p>
+            
+            <form>
+                <div>
+                    <label for="titulo">Título de la Tarea:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+                <div>
+                    <label for="desc">Descripción (Máx. 200 caracteres):</label>
+                    <textarea id="desc" name="desc" maxlength="200"></textarea>
+                </div>
+                <div>
+                    <label for="fecha">Fecha Límite:</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+                <button type="submit">Guardar Tarea</button>
+            </form>
+
+            <h3>Pasos para Registrar</h3>
+            <ol>
+                <li>Completar el título.</li>
+                <li>Escribir una descripción <span style="color: blue;">detallada</span>.</li>
+                <li>Hacer clic en Guardar.</li>
+            </ol>
+        </section>
+
+        <section id="listado">
+            <h2>Listado de Tareas (Read)</h2>
+            <p>Este es el registro de tareas pendientes. Es la 'R' (Read) del CRUD.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Fecha de Creación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><article>Preparar presentación</article></td>
+                        <td><time datetime="2025-12-02">02/Dic/2025</time></td>
+                        <td>
+                            <button>Actualizar</button> 
+                            <a href="#">Eliminar</a> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Comprar insumos</td>
+                        <td><time datetime="2025-11-28">28/Nov/2025</time></td>
+                        <td>
+                            <button>Actualizar</button>
+                            <a href="#">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><p>Revisar correo urgente <strong>del jefe</strong>.</p></td>
+                        <td><time datetime="2025-11-25">25/Nov/2025</time></td>
+                        <td>
+                            <button>Actualizar</button>
+                            <a href="#">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <aside>
+            <h2>Ayuda Rápida</h2>
+            <p>Recuerda siempre <mark>priorizar</mark> las tareas. Los estados comunes son:</p>
+            <ul>
+                <li><mark>Urgente</mark></li>
+                <li>Normal</li>
+                <li><span style="color: green;">Completada</span></li>
+            </ul>
+            <p>Si tienes dudas, revisa el <a href="https://riwi.com/contacto/acerca">manual de usuario</a> (afectado por base).</p>
+        </aside>
+
+        <section id="media">
+            <h2>Multimedia del Sistema</h2>
+            <p>Aquí puede encontrar tutoriales <mark>visuales</mark> e <span style="font-weight: bold;">instructivos de audio</span>.</p>
+
+            <h3>Audio Instructivo</h3>
+            <audio controls>
+                <source src="/ruta/a/audio_prueba.mp3" type="audio/mp3">
+                <p>Tu navegador no soporta el elemento de audio.</p>
+            </audio>
+
+            <h3>Video Tutorial</h3>
+            <video controls poster="/ruta/a/imagen_portada.jpg" width="400">
+                <source src="/ruta/a/video_prueba.mp4" type="video/mp4">
+                <p>Tu navegador no soporta el elemento de video.</p>
+            </video>
+            
+            <p>La siguiente es una imagen de <a href="https://ejemplo.com/imagen.jpg">ejemplo</a>.</p>
+            <img src="/ruta/a/icono.png" alt="Icono del sistema CRUDScope" width="50">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Derechos de autor &copy; 2025</p>
+        <address>
+            Contacto:
+            <a href="mailto:tu.correo@ejemplo.com">tu.correo@ejemplo.com</a> |
+            <a href="tel:+573001234567">(+57) 300 123 4567</a>
+        </address>
+    </footer>
+</body>
+</html>

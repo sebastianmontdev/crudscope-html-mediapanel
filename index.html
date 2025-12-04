@@ -26,18 +26,22 @@
         <article>
             <div>
             <section>
-                <h2>crear una tarea</h2>
-                    <p>aqui puedes registrar una nueva tarea</p>
-                    <p>titulo de la tarea <input type="text"> </p> 
-                    <p>Descripción (Máx. 200 caracteres): <input type="text" maxlength="200" ></p>
-                    <p>fecha limite: <input type="date" id="fechaNacimiento" name="fechaNacimiento"></p>
-                    <button>guardar info</button>
-                <h3>pasos para registrar</h3>
-                    <ol>
-                        <li>completar el titulo</li>
-                        <li>escribir descripcion <b>detallada</b></li> 
-                        <li>hacer click para guardar</li> 
-                    </ol>
+                <form>
+                <div>
+                    <label for="titulo" >Título de la Tarea:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                    <button>Enviar</button>
+                </div>
+                <div>
+                    <label for="desc">Descripción (Máx. 200 caracteres):</label>
+                    <textarea id="desc" name="desc" maxlength="200"></textarea>
+                </div>
+                <div>
+                    <label for="fecha">Fecha Límite:</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+                <button type="submit">Guardar Tarea</button>
+            </form>
             </section>
             </div>
             <div>
@@ -53,14 +57,14 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>20 ejercicios de python</td>
+                        <td><mark>20 ejercicios de python</mark></td>
                         <td>30/nov/1998</td>
                         <td><button>actualizar</button></td>
                         <td><button>eliminar</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>aprender git para mañana</td>
+                        <td><mark>aprender git para mañana</mark></td>
                         <td>15/sep/2000</td>
                         <td><button>actualizar</button></td>
                         <td><button>eliminar</button></td>
@@ -71,11 +75,12 @@
                 <aside>
                 <h2>ayuda rapida</h2>
                 <div></div>
-                <p>recuerda siempre priorizar las tareas de moodle</p>
+                <p>recuerda siempre priorizar las tareas de <i>moodle</i></p>
                 <div>
-                <p>si necesitas ayuda puedes consultar este<a href=""> link</a></p>
+                <p><u>si necesitas ayuda puedes consultar este</u><a href=""> link</a></p>
                 </aside>
-                <div>            <section>
+                <div>
+                <section>
                 <h2 id="hola">multimedia</h2>
                 <p>aqui puedes encontrar recuersos multimedia para tus trabajos</p>
                 <h3>audio instructivo</h3>
@@ -86,6 +91,8 @@
                 <video controls width="640" height="360">
                 <source src="mi-video.mp4" type="video/mp4">
                 </video>
+                <p>La siguiente es una imagen de <a href="https://ejemplo.com/imagen.jpg">ejemplo</a>.</p>
+                <img src="/ruta/a/icono.png" alt="Icono del sistema CRUDScope" width="50">
             </section>
             </div>
         </article>
